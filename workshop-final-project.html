@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📓 Final SheCodes Workshop Project</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Titillium Web', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            background-color: #ECF8F8;
+            color: #2d3142;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 48px;
+            text-align: center;
+            margin: 0;
+            padding: 0px 0px 15px 0px;
+        }
+
+        h3 {
+            font-weight: 400;
+            font-size: 24px;
+            text-align: center;
+            margin: 0;
+            padding: 0px 0px 15px 0px;
+        }
+
+        p {
+            text-align: left;
+            padding-bottom: 20px;
+        }
+
+        button {
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 20px;
+            display: block;
+            margin: 0 auto 20px auto;
+            color: #ffffff;
+            background-color: #0081a7;
+            border: 1px solid #0081a7;
+            border-radius: 30px;
+            padding: 10px 25px;
+            transition: all 200ms ease-in-out;
+        }
+
+        button:hover {
+            background-color: #ffffff;
+            border-color: #0081a7;
+            color: #0081a7;
+        }
+
+        a {
+            color: #f07167;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 400px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 500px;
+            height: auto;
+            border-radius: 30px;
+            box-shadow:  0 6px 8px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .content {
+            width: 400px;
+            padding: 30px 50px 30px 50px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            
+        }
+
+        .footer {
+            text-align: center;
+            color: rgba(34, 34, 59, 0.6);
+            font-size: 14px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="text">
+                <h1>
+                    ✏️
+                    <br />
+                Stationery
+                </h1>
+                <h3>
+                    Stationery refers to paper, matching envelopes, and writing implements.
+                </h3>
+                <p>
+                    Originally, the term 'stationery' referred to all products sold by a stationer, whose name indicated that his book shop
+                    was on a fixed spot. This was usually somewhere near a university, and permanent, while medieval trading was mainly
+                    carried on by itinerant peddlers (including chapmen, who sold books) and others (such as farmers and craftsmen) at
+                    markets and fairs. It was a unique term used between the 13th and 15th centuries in the manuscript culture. Stationers'
+                    shops were places where books were bound, copied, and published. These shops often loaned books to nearby-university
+                    students for a fee. The books were loaned out in sections, and the only way to get the next part of the book was to
+                    return the previous section. 
+                    <br />
+                    <a href="https://en.wikipedia.org/wiki/Stationery">
+                        ➡️ Read more here
+                    </a>
+                </p>
+            </div>
+            <button>
+                Discover your new pen
+            </button>
+        </div>
+    </div>
+    <p class="footer">
+        Page coded by Constanza Morales A.
+    </p>
+
+    <script>
+        function newPen () {
+            let firstName = prompt("Hi 👋🏼 What's your first name?");
+            let penType = prompt("What's your favourite type of pen: pencil, ballpoint or fountain?");
+            let content = document.querySelector(".text");
+            penType = penType.toLowerCase();
+            if (penType === "pencil") {
+                content.innerHTML = "<h3>" + firstName + ", we recommend you the " + '<strong><a href="https://blackwing602.com/products/blackwing-602-set-of-12">Blackwing 602 ✏️✨</a></strong><br />' + '<img src="https://cdn.shopify.com/s/files/1/0147/3124/7680/products/new12pack-10_1000x.jpg?v=1580863851">';
+            } else {
+                if (penType === "ballpoint") {
+                    content.innerHTML = "<h3>" + firstName + ", we recommend you the " + '<strong><a href="https://www.jetpens.com/Uni-Jetstream-Ballpoint-Pen-0.7-mm-Alpha-Gel-Grip-Series-Black-Body/pd/2775">Uniball Jetstream 🖊✨</a></strong><br />' + '<img src="https://static2.jetpens.com/images/a/000/178/178518.jpg?auto=format&ba=middle%2Ccenter&balph=3&blend64=aHR0cDovL3d3dy5qZXRwZW5zLmNvbS9pbWFnZXMvYXNzZXRzL3dhdGVybWFyazIucG5n&bm=difference&bs=inherit&chromasub=444&fm=jpg&mark64=aHR0cDovL3d3dy5qZXRwZW5zLmNvbS9pbWFnZXMvYXNzZXRzL3dhdGVybWFyazEucG5n&markalign=top%2Cright&markalpha=30&markscale=16&q=90&usm=20&w=1200&s=9ac584639adcc923bc95e6f3b6c3c869">';
+                } else {
+                    content.innerHTML = "<h3>" + firstName + ", we recommend you the " + '<strong><a href="https://www.jetpens.com/LAMY-Safari-Fountain-Pen-Aquamarine-Fine-Nib/pd/29622">LAMY Safari 🖋✨</a></strong><br />' + '<img src="https://static2.jetpens.com/images/a/000/182/182800.jpg?auto=format&ba=middle%2Ccenter&balph=3&blend64=aHR0cDovL3d3dy5qZXRwZW5zLmNvbS9pbWFnZXMvYXNzZXRzL3dhdGVybWFyazIucG5n&bm=difference&bs=inherit&chromasub=444&fm=jpg&mark64=aHR0cDovL3d3dy5qZXRwZW5zLmNvbS9pbWFnZXMvYXNzZXRzL3dhdGVybWFyazEucG5n&markalign=top%2Cright&markalpha=30&markscale=16&q=90&usm=20&w=1200&s=aa11aa91b3ec5b7037d38a40e585f407">';
+                }
+            }
+        }
+
+        let discoverButton = document.querySelector("button");
+            discoverButton.addEventListener("click", newPen);
+    </script>
+</body>
+</html>
